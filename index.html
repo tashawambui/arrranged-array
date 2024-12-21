@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Array Mapping and Sorting</title>
+</head>
+
+<body>
+    <div>
+        <p>Original Array: <span id="originalArray"></span></p>
+        <p>Mapped Array: <span id="mappedArray"></span></p>
+        <p>Ascending Order: <span id="ascendingOrder"></span></p>
+        <p>Descending Order: <span id="descendingOrder"></span></p>
+    </div>
+
+    <script>
+        let array = [5, 12, 8, 130, 44];
+
+        document.getElementById('originalArray').innerHTML = array.join(", ");
+
+        let mappedArray = array.map(element => element * 2);
+        document.getElementById('mappedArray').innerHTML = mappedArray.join(", ");
+
+        let ascendingArray = [...mappedArray].sort((a, b) => a - b);
+        document.getElementById('ascendingOrder').innerHTML = ascendingArray.join(", ");
+
+        let descendingArray = [...mappedArray].sort((a, b) => b - a);
+        document.getElementById('descendingOrder').innerHTML = descendingArray.join(", ");
+    </script>
+</body>
+
+</html>
